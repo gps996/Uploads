@@ -1,6 +1,20 @@
 require 'cowsay'
 require 'httparty'
 
+class Permission
+
+    puts "Please enter your age:"
+    answer = gets.chomp.to_i
+
+    if answer > 16
+      puts "Welcome to Potty-Mouth"
+    else answer < 16
+      puts "Sorry, but you're too young."
+
+      exit
+    end
+  end
+
 class Initiate
   puts "Type: 'Out' to exit placeholder_name."
   sleep 3
@@ -21,6 +35,6 @@ class Bot_loop
     end
   end
 end
-
+Permission.new
 Initiate.new
 Bot_loop.new
